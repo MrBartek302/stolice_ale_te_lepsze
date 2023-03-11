@@ -179,12 +179,7 @@ function odejmijpunkty(id){
 
 
 function serca(){
-   
-    if(zycia==2){
-        document.getElementById("sercah").innerHTML = "❤️❤️❤️"
-    }
-    
-    else if(zycia==1){
+    if(zycia==1){
      document.getElementById("sercah").innerHTML = "❤️❤️💔"
     }
     
