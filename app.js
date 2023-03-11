@@ -142,6 +142,7 @@ function dodajpunkty(){
 
 
 function odejmijpunkty(id){
+    if(zycia>0){
     if(wybrane == 0 ){
     document.getElementById("przycisk"+id).style.backgroundColor = "red"
                zycia--
@@ -156,6 +157,23 @@ function odejmijpunkty(id){
 
                 wybrane = 1
             }
+            }
+
+
+            else{
+                document.getElementById("gra").innerHTML = ""
+                const div_p = document.createElement("div_p")
+                const ponownie = document.createElement("button")
+                ponownie.setAttribute("onclick", "window.location.reload()")
+                ponownie.innerHTML= "Zagraj ponownie"
+                div_p.innerHTML =  "Koniec gry, wyczerpałeś swoje życia"
+                div_p.classList.add("div_p")
+                div_p.appendChild(ponownie)
+                document.getElementById("gra").appendChild(div_p)
+                
+            }
+
+
             }
 
 
@@ -174,18 +192,7 @@ function serca(){
         document.getElementById("sercah").innerHTML = "❤️💔💔"
        }
     
-       else{
-        document.getElementById("gra").innerHTML = ""
-        const div_p = document.createElement("div_p")
-        const ponownie = document.createElement("button")
-        ponownie.setAttribute("onclick", "window.location.reload()")
-        ponownie.innerHTML= "Zagraj ponownie"
-        div_p.innerHTML =  "Koniec gry, wyczerpałeś swoje życia"
-        div_p.classList.add("div_p")
-        div_p.appendChild(ponownie)
-        document.getElementById("gra").appendChild(div_p)
-        
-    }
+    
 }
 
 
